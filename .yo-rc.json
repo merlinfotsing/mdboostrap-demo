@@ -1,16 +1,17 @@
 {
   "generator-jhipster": {
     "promptValues": {
-      "packageName": "com.example.demo"
+      "packageName": "com.mycompany.myapp"
     },
-    "jhipsterVersion": "4.14.5",
+    "jhipsterVersion": "5.0.2",
+    "applicationType": "monolith",
     "baseName": "demo",
-    "packageName": "com.example.demo",
-    "packageFolder": "com/example/demo",
+    "packageName": "com.mycompany.myapp",
+    "packageFolder": "com/mycompany/myapp",
     "serverPort": "8080",
     "authenticationType": "jwt",
     "cacheProvider": "ehcache",
-    "enableHibernateCache": true,
+    "enableHibernateCache": false,
     "websocket": false,
     "databaseType": "sql",
     "devDatabaseType": "h2Disk",
@@ -19,18 +20,12 @@
     "messageBroker": false,
     "serviceDiscoveryType": false,
     "buildTool": "maven",
-    "enableSocialSignIn": true,
     "enableSwaggerCodegen": false,
-    "jwtSecretKey": "f597056ea9714ace2bf7bbfd6e11f14ec62d3859",
+    "jwtSecretKey": "e258618a65b8396046cf9149ff7894e380255bdd",
     "clientFramework": "angularX",
     "useSass": true,
     "clientPackageManager": "yarn",
-    "applicationType": "monolith",
-    "testFrameworks": [
-      "gatling",
-      "cucumber",
-      "protractor"
-    ],
+    "testFrameworks": [],
     "jhiPrefix": "jhi",
     "enableTranslation": false
   }
