@@ -17,7 +17,7 @@ import { DemoHomeModule } from 'app/home';
 import { DemoAccountModule } from './account/account.module';
 import { DemoEntityModule } from './entities/entity.module';
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
-//import {MDBBootstrapModulesPro, MDBSpinningPreloader} from 'ng-uikit-pro-standard';
+import { MDBBootstrapModulesPro, MDBSpinningPreloader } from 'ng-uikit-pro-standard';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 
 @NgModule({
@@ -29,8 +29,8 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         DemoCoreModule,
         DemoHomeModule,
         DemoAccountModule,
-        DemoEntityModule
-        //MDBBootstrapModulesPro.forRoot(),
+        DemoEntityModule,
+        MDBBootstrapModulesPro.forRoot()
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
@@ -58,8 +58,8 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
             useClass: NotificationInterceptor,
             multi: true,
             deps: [Injector]
-        }
-        //MDBSpinningPreloader,
+        },
+        MDBSpinningPreloader
     ],
     bootstrap: [JhiMainComponent],
     schemas: [NO_ERRORS_SCHEMA]
