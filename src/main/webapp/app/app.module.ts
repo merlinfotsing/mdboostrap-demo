@@ -1,6 +1,6 @@
 import './vendor.ts';
 
-import { NgModule, Injector } from '@angular/core';
+import { NgModule, Injector, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Ng2Webstorage, LocalStorageService, SessionStorageService } from 'ngx-webstorage';
@@ -13,11 +13,12 @@ import { NotificationInterceptor } from './blocks/interceptor/notification.inter
 import { DemoSharedModule } from 'app/shared';
 import { DemoCoreModule } from 'app/core';
 import { DemoAppRoutingModule } from './app-routing.module';
-import { DemoHomeModule } from './home/home.module';
+import { DemoHomeModule } from 'app/home';
 import { DemoAccountModule } from './account/account.module';
 import { DemoEntityModule } from './entities/entity.module';
-// jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ErrorComponent } from './layouts';
+//import {MDBBootstrapModulesPro, MDBSpinningPreloader} from 'ng-uikit-pro-standard';
+// jhipster-needle-angular-add-module-import JHipster will add new module here
 
 @NgModule({
     imports: [
@@ -29,6 +30,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
         DemoHomeModule,
         DemoAccountModule,
         DemoEntityModule
+        //MDBBootstrapModulesPro.forRoot(),
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, FooterComponent],
@@ -57,7 +59,9 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
             multi: true,
             deps: [Injector]
         }
+        //MDBSpinningPreloader,
     ],
-    bootstrap: [JhiMainComponent]
+    bootstrap: [JhiMainComponent],
+    schemas: [NO_ERRORS_SCHEMA]
 })
 export class DemoAppModule {}
